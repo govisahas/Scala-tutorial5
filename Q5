@@ -1,0 +1,24 @@
+
+//Q5
+
+object add extends App{
+
+    def sumEven(n: Int): Int = n match {
+    
+    case 0 => n
+    case x if x %2 == 0 => n+ sumEven(n-1)
+    case _ =>sumEven(n-1)
+    }
+
+    def  less(N: Int): Unit= {
+  if(N%2 == 0){
+println(sumEven(N)- N)
+  }else{
+    println(sumEven(N))
+  }
+
+    }
+
+less(5)
+
+}
